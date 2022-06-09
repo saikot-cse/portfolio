@@ -4,26 +4,44 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-
-const Contact = () => {
+import emailjs from "@emailjs/browser"
+import Swal from 'sweetalert2'
+import Image from 'next/image';
+import contact from "../public/Assets/contact.jpg"
+export const Contact = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     setName('');
     setPhone('');
     setEmail('');
     setSubject('');
     setMessage('');
+    e.preventDefault();
+
+    emailjs.sendForm('service_10qdgud', 'SaifullahMansur', e.target, '0_YT4HBdwq3g9VkdA')
+        .then((result) => {
+          Swal.fire(
+            'Your Message has been successfully sent.',
+            'I will contact you Soon.',
+            'success'
+          )
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    e.target.reset();
   };
+  
 
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
+        <p className='text-xl tracking-widest uppercase text-[#067DE7]'>
           Contact
         </p>
         <h2 className='py-4'>Get In Touch</h2>
@@ -32,33 +50,36 @@ const Contact = () => {
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='lg:p-4 h-full '>
               <div>
-                <img
+                <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300'
-                  src='https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80'
-                  alt='/'
+                  src={contact}
+                  alt='/' height="" width=""
                 />
               </div>
               <div>
-                <h2 className='py-2'>Clint Briley</h2>
+                <h2 className='py-2'>Saifullah Mansur</h2>
                 <p>Front-End Developer</p>
                 <p className='py-4'>
                   I am available for freelance or full-time positions. Contact
-                  me and lets talk.
+                  me and let&apos;s talk.
                 </p>
               </div>
               <div>
                 <p className='uppercase pt-8'>Connect With Me</p>
                 <div className='flex items-center justify-between py-4'>
-                  <a href='https://www.linkedin.com/in/clint-briley-50056920a/' target="_blank" rel="norefferer noreferrer">
+                  <Link
+                    href='https://www.linkedin.com/in/saifullah-mansur/'
+                    target='_blank'
+                  >
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                       <FaLinkedinIn />
                     </div>
-                  </a>
-                  <a href='https://github.com/fireclint' target="_blank" rel="norefferer noreferrer">
+                  </Link>
+                  <Link href='https://github.com/saikot-cse' target='_blank' rel="norefferer">
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                       <FaGithub />
                     </div>
-                  </a>
+                  </Link>
 
                   <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineMail />
@@ -78,7 +99,7 @@ const Contact = () => {
             <div className='p-4'>
               <form
                 onSubmit={handleSubmit}
-                action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
+                action='https://getform.io/f/b1714a65-1ad7-4be6-97a9-41dda34a4671'
                 method='POST'
               >
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
@@ -145,7 +166,7 @@ const Contact = () => {
         <div className='flex justify-center py-12'>
           <Link href='/'>
             <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-              <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={30} />
+              <HiOutlineChevronDoubleUp className='text-[#067DE7]' size={30} />
             </div>
           </Link>
         </div>
@@ -154,4 +175,3 @@ const Contact = () => {
   );
 };
 
-export default Contact;
