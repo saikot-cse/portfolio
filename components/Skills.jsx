@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
-
+import HTML from "../public/assets/skills/html.png"
+import CSS from "../public/assets/skills/css.png"
+import JavaScript from "../public/assets/skills/javascript.png"
+import REACT from "../public/assets/skills/react.png"
+import Tailwind from "../public/assets/skills/tailwind.png"
+import Firebase from "../public/assets/skills/firebase.png"
+import Github from "../public/assets/skills/github1.png"
 const Skills = () => {
   return (
     <div id='skills' className='w-full lg:h-screen p-2'>
@@ -15,7 +21,22 @@ const Skills = () => {
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image
-                  src='/../public/assets/skills/html.png'
+                  src={HTML}
+                  width='64px'
+                  height='64px'
+                  alt='/'
+                />
+              </div>
+              <div className='flex flex-col items-center justify-center'>
+                <h3>HTML</h3>
+              </div>
+            </div>
+          </div>
+          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+              <div className='m-auto'>
+                <Image
+                  src={CSS}
                   width='64px'
                   height='64px'
                   alt='/'
@@ -30,7 +51,7 @@ const Skills = () => {
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image
-                  src='/../public/assets/skills/css.png'
+                  src={JavaScript}
                   width='64px'
                   height='64px'
                   alt='/'
@@ -45,7 +66,7 @@ const Skills = () => {
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image
-                  src='/../public/assets/skills/javascript.png'
+                  src={REACT}
                   width='64px'
                   height='64px'
                   alt='/'
@@ -60,7 +81,7 @@ const Skills = () => {
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image
-                  src='/../public/assets/skills/react.png'
+                  src={Tailwind}
                   width='64px'
                   height='64px'
                   alt='/'
@@ -75,7 +96,7 @@ const Skills = () => {
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image
-                  src='/../public/assets/skills/tailwind.png'
+                  src={Firebase}
                   width='64px'
                   height='64px'
                   alt='/'
@@ -90,7 +111,7 @@ const Skills = () => {
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image
-                  src='/../public/assets/skills/firebase.png'
+                  src={Github}
                   width='64px'
                   height='64px'
                   alt='/'
@@ -101,38 +122,6 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                  src='/../public/assets/skills/github1.png'
-                  width='64px'
-                  height='64px'
-                  alt='/'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'>
-                <h3>Github</h3>
-              </div>
-            </div>
-          </div>
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image
-                  src='/../public/assets/skills/shopify.png'
-                  width='64px'
-                  height='64px'
-                  alt='/'
-                />
-              </div>
-              <div className='flex flex-col items-center justify-center'>
-                <h3>Shopify</h3>
-              </div>
-            </div>
-          </div>
-
-
         </div>
       </div>
     </div>
