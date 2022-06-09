@@ -24,9 +24,9 @@ const About = () => {
           </a>
         </div>
         <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-          <img
+        <Image
             className='rounded-xl'
-            src={profile}
+            src={profile} width="1364" height="1400"
             alt='/'
           />
         </div>
