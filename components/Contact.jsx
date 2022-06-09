@@ -7,7 +7,7 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import emailjs from "@emailjs/browser"
 import Swal from 'sweetalert2'
 import Image from 'next/image';
-import contact from "../public/Assets/contact.jpg"
+import contact from "../public/contact.jpg"
 export const Contact = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
