@@ -7,6 +7,7 @@ import REACT from "../public/assets/skills/react.png"
 import Tailwind from "../public/assets/skills/tailwind.png"
 import Firebase from "../public/assets/skills/firebase.png"
 import Github from "../public/assets/skills/github1.png"
+import MongoDB from "../public/assets/skills/mongo.png"
 const Skills = () => {
   return (
     <div id='skills' className='w-full lg:h-screen p-2'>
@@ -119,6 +120,21 @@ const Skills = () => {
               </div>
               <div className='flex flex-col items-center justify-center'>
                 <h3>Github</h3>
+              </div>
+            </div>
+          </div>
+          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+              <div className='m-auto'>
+                <Image
+                  src={MongoDB}
+                  width='64px'
+                  height='64px'
+                  alt='/'
+                />
+              </div>
+              <div className='flex flex-col items-center justify-center'>
+                <h3>MongoDB</h3>
               </div>
             </div>
           </div>

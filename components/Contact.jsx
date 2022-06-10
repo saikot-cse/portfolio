@@ -1,14 +1,30 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-import emailjs from "@emailjs/browser"
-import Swal from 'sweetalert2'
+import emailjs from "@emailjs/browser";
+import React from 'react';
 import Image from 'next/image';
-import contact from "../public/contact.jpg"
+import { Wave } from 'react-animated-text';
+import Link from 'next/link';
+import { useState } from 'react';
+import { AiOutlineMail } from 'react-icons/ai';
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import TextTransition, { presets } from "react-text-transition";
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import Swal from 'sweetalert2';
+import contact from "../public/contact.jpg";
 export const Contact = () => {
+  const TEXTS = [
+    "MERN Stack",
+    "Front-End",
+    "Full Stack"
+  ];
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() =>
+      setIndex(index => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -57,8 +73,11 @@ export const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className='py-2'>Saifullah Mansur</h2>
-                <p>Front-End Developer</p>
+                <h2 className='py-2'><span className='text-[#067DE7] inline-block'> <Wave text="Saifullah Mansur" effect="verticalFadeIn" effectDirection="up" iterations={1}/></span></h2>
+                <p className='py-2 text-gray-700'>A <span className="inline-block text-[#0EC8E5]"><TextTransition
+        text={ TEXTS[index % TEXTS.length] }
+        springConfig={ presets.stiff }
+      /></span> Developer</p>
                 <p className='py-4'>
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
@@ -66,30 +85,32 @@ export const Contact = () => {
               </div>
               <div>
                 <p className='uppercase pt-8'>Connect With Me</p>
-                <div className='flex items-center justify-between py-4'>
-                  <Link
-                    href='https://www.linkedin.com/in/saifullah-mansur/'
-                    target='_blank'
-                  >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaLinkedinIn />
-                    </div>
-                  </Link>
-                  <Link href='https://github.com/saikot-cse' target='_blank' rel="norefferer">
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaGithub />
-                    </div>
-                  </Link>
-
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <AiOutlineMail />
-                  </div>
-                  <Link href='/resume'>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <BsFillPersonLinesFill />
-                    </div>
-                  </Link>
-                </div>
+                <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
+            <a
+              href='https://www.linkedin.com/in/saifullah-mansur/'
+              target='_blank' rel="noreferrer"
+            >
+          
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#0A66C2] hover:text-white ease-in duration-300'>
+                <FaLinkedinIn />
+              </div>
+            </a>
+            <a href='https://github.com/saikot-cse' target='_blank' rel="noreferrer">
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#BABBBD] hover:text-black ease-in duration-300'>
+                <FaGithub />
+              </div>
+            </a>
+            <Link href='/#contact'>
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-gradient-to-r from-[#067DE7] to-[#0EC8E5] hover:text-white ease-in duration-300'>
+                <AiOutlineMail />
+              </div>
+            </Link>
+            <a href='https://www.facebook.com/saifullahmansursaikot' target='_blank' rel="noreferrer">
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#067DE7] hover:text-white ease-in duration-300'>
+                <FaFacebook />
+              </div>
+            </a>
+          </div>
               </div>
             </div>
           </div>

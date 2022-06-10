@@ -2,8 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Wave } from 'react-animated-text';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn, FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import TextTransition, { presets } from "react-text-transition";
 const TEXTS = [
   "MERN Stack",
