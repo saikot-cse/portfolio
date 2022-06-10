@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
-import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
+import { RiRadioButtonFill } from 'react-icons/ri';
+import estro from "../public/assets/projects/estro.jpg";
 
 const property = () => {
   return (
@@ -13,11 +12,11 @@ const property = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={propertyImg}
+          src={estro}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Property Finder</h2>
+          <h2 className='py-2'>Estro Gadget</h2>
           <h3>React JS / Tailwind / Firebase</h3>
         </div>
       </div>
@@ -27,17 +26,11 @@ const property = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-            This app was built using React JS and is hosted on Firebase. Users
-            are able to search properties based on an Address, City, or ZIP code
-            to retrieve a list of active properties currently for sale. You will
-            be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup & signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
+            This app was built using React JS and is hosted on Firebase. Creativity is at the heart of every dream. Every idea, every groundbreaking leap that changes our world starts with the vision of talented creators. At Estro Gadget, we give these creators the tools they need to bring their ideas to life.
           </p>
-          <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-          <button className='px-8 py-2 mt-4'>Code</button>
+          <a href="https://estro-gadget.web.app/" target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
+          <a href="https://github.com/saikot-cse/estro-gadget" target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Client Side Code</button></a>
+          <a href="https://github.com/saikot-cse/estro-gadget-server" target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4'>Server Side Code</button></a>
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
           <div className='p-2'>
@@ -50,16 +43,25 @@ const property = () => {
                 <RiRadioButtonFill className='pr-1' /> Tailwind
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Javascript
+                <RiRadioButtonFill className='pr-1' /> React icons
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> React Query
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> AOS(Animation)
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> SweetAlert2(Modals)
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Firebase
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google API
+                <RiRadioButtonFill className='pr-1' /> Daisy UI
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
+                <RiRadioButtonFill className='pr-1' /> MongoDB
               </p>
             </div>
           </div>

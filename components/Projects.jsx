@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
-import cryptoImg from '../public/assets/projects/crypto.jpg'
-import netflixImg from '../public/assets/projects/netflix.jpg'
-import twitchImg from '../public/assets/projects/twitch.jpg'
+import estro from "../public/assets/projects/estro.jpg";
+import pro from '../public/assets/projects/pro.jpg'
+import diligent from '../public/assets/projects/diligent.jpg'
+import keylogger from '../public/assets/projects/keylogger.jpg'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -17,23 +17,23 @@ const Projects = () => {
         <h2 className='py-4'>What Ive Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
-            title='Property Finder'
-            backgroundImg={propertyImg}
+            title='Estro Gadget'
+            backgroundImg={estro}
             projectUrl='/property'
           />
           <ProjectItem
-            title='Crypto App'
-            backgroundImg={cryptoImg}
+            title='Pro Tech Gear'
+            backgroundImg={pro}
             projectUrl='/crypto'
           />
           <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
+            title='Diligent Developer'
+            backgroundImg={diligent}
             projectUrl='/netflix'
           />
           <ProjectItem
-            title='Twitch UI'
-            backgroundImg={twitchImg}
+            title='KeyLogger Zone'
+            backgroundImg={keylogger}
             projectUrl='/twitch'
           />
         </div>

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaFacebook } from 'react-icons/fa';
 import navLogo from "../public/navLogo.png"
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -165,34 +165,32 @@ const Navbar = () => {
               <p className='uppercase tracking-widest text-[#5651e5]'>
                 Lets Connect
               </p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <a
-                  href='https://www.linkedin.com/in/clint-briley-50056920a/'
-                  target='_blank' rel="noreferrer"
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaLinkedinIn />
-                  </div>
-                </a>
-                <a
-                  href='https://github.com/fireclint'
-                  target='_blank' rel="noreferrer"
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
-                </a>
-                <Link href='/#contact'>
-                  <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <AiOutlineMail />
-                  </div>
-                </Link>
-                <Link href='/resume'>
-                  <div onClick={()=>setNav(!nav)} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <BsFillPersonLinesFill />
-                  </div>
-                </Link>
+              <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
+            <a
+              href='https://www.linkedin.com/in/saifullah-mansur/'
+              target='_blank' rel="noreferrer"
+            >
+          
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#0A66C2] hover:text-white ease-in duration-300'>
+                <FaLinkedinIn />
               </div>
+            </a>
+            <a href='https://github.com/saikot-cse' target='_blank' rel="noreferrer">
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#BABBBD] hover:text-black ease-in duration-300'>
+                <FaGithub />
+              </div>
+            </a>
+            <Link href='/#contact'>
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-gradient-to-r from-[#067DE7] to-[#0EC8E5] hover:text-white ease-in duration-300'>
+                <AiOutlineMail />
+              </div>
+            </Link>
+            <a href='https://www.facebook.com/saifullahmansursaikot' target='_blank' rel="noreferrer">
+              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-[#067DE7] hover:text-white ease-in duration-300'>
+                <FaFacebook />
+              </div>
+            </a>
+          </div>
             </div>
           </div>
         </div>
